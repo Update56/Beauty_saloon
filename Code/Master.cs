@@ -6,23 +6,11 @@ using System.Threading.Tasks;
 
 namespace Project4.Code
 {
-    enum Skill
-    {
-        novice,
-        skilled,
-        expert,
-        pro
-    }
-    enum Qual
-    {
-        haircutter,
-        visagiste,
-        manicurist
-    }
     internal class Master
     {
+        Qual qual;       //квалификация мастера
+        Skill skill;     //умение мастера
+        int remaining_time; //оставшееся время до завершения работы
 
-        Skill skill;
-        Qual qual;
     }
 }
