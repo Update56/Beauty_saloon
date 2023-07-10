@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Project4.Code
 {
@@ -8,7 +9,7 @@ namespace Project4.Code
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-
+        Start_menu start_Menu = new();
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -19,14 +20,13 @@ namespace Project4.Code
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            start_Menu.Show();
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
             // TODO: use this.Content to load your game content here
         }
 
