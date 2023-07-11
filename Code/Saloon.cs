@@ -26,27 +26,21 @@ namespace Project4.Code
     {
         public Saloon() { }
 
-        static private int seed; //ключ генератора???
-        private int amount_masters; //количество мастеров
         List<Customer> customers = new List<Customer>();
-        public int Seed
+        List<Master> masters = new List<Master>();
+        Random rnd = new Random();
+        public void Creting_masters(List<int> enums, int seed, int amount_masters)
         {
-            get { return seed; }
-            set { seed = value; }
-        }
-        public int Amount_masters 
-        {
-            get { return amount_masters; } 
-            set { amount_masters = value; } 
-        }
-
-        static Random rnd = new Random(seed);
-        void Creting_masters()
-        {
-            for (int i = 0; i < amount_masters; i++)
+            rnd = new Random(seed);
+            
+            for (int i = 0; i < amount_masters * 2; i+=2)
             {
-                customers.Add(new Customer((Qual)rnd.Next(0, 2), (Skill)rnd.Next(0, 3), rnd.Next(20, 60)));
+                masters.Add(new Master((Qual)enums[i], (Skill)enums[i + 1]));
             }
-        }        
+        }
+        void Creting_customers()
+        {
+            customers.Add(new Customer((Qual)rnd.Next(0, 2), (Skill)rnd.Next(0, 3), rnd.Next(20, 60)));
+        }
     }
 }

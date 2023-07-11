@@ -583,6 +583,7 @@
             Name = "Start_menu";
             ShowInTaskbar = false;
             Text = "Start_menu";
+            Load += Start_menu_Load;
             ((System.ComponentModel.ISupportInitialize)trackBar_amount).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

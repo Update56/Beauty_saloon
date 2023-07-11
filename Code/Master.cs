@@ -12,13 +12,12 @@ namespace Project4.Code
         Skill skill;     //умение мастера
         int remaining_time; //оставшееся время до завершения работы
 
-        public Master(Qual qual, Skill skill, int remaining_time)
+        public Master(Qual qual, Skill skill)
         {
             this.qual = qual;
             this.skill = skill;
-            this.remaining_time = remaining_time;
+            this.remaining_time = 0;
         }
-
 
     }
 }
