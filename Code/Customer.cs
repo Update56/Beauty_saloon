@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
+using SharpDX.DXGI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +11,12 @@ namespace Project4.Code
 {
     internal class Customer
     {
-        Qual service;     //тип услуги
-        Skill difficulty; //сложность услуги
-        int time;         //время оказания услуги
-        
-        public Customer(Qual service, Skill difficulty, int time) //конструктор
+        public Qual service;      //тип услуги
+        public Skill difficulty; //сложность услуги
+        public TimeSpan time;         //время оказания услуги
+        public Names name;
+        public Vector2 pos = new Vector2(50, 700);
+        public Customer(Qual service, Skill difficulty, TimeSpan time) //конструктор
         {
             this.service = service;
             this.difficulty = difficulty;

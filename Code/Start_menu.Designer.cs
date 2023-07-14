@@ -32,7 +32,6 @@
             label_seed = new System.Windows.Forms.Label();
             label_amount = new System.Windows.Forms.Label();
             trackBar_amount = new System.Windows.Forms.TrackBar();
-            textBox_seed = new System.Windows.Forms.TextBox();
             label_trackBar_low = new System.Windows.Forms.Label();
             label_trackBar_high = new System.Windows.Forms.Label();
             label_qual1 = new System.Windows.Forms.Label();
@@ -77,6 +76,7 @@
             groupBox6 = new System.Windows.Forms.GroupBox();
             groupBox7 = new System.Windows.Forms.GroupBox();
             groupBox8 = new System.Windows.Forms.GroupBox();
+            numericUpDown_seed = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)trackBar_amount).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -86,6 +86,7 @@
             groupBox6.SuspendLayout();
             groupBox7.SuspendLayout();
             groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown_seed).BeginInit();
             SuspendLayout();
             // 
             // EntryButton
@@ -130,14 +131,6 @@
             trackBar_amount.TabIndex = 1;
             trackBar_amount.Value = 1;
             trackBar_amount.Scroll += trackBar_amount_Scroll;
-            // 
-            // textBox_seed
-            // 
-            textBox_seed.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            textBox_seed.Location = new System.Drawing.Point(12, 44);
-            textBox_seed.Name = "textBox_seed";
-            textBox_seed.Size = new System.Drawing.Size(153, 21);
-            textBox_seed.TabIndex = 3;
             // 
             // label_trackBar_low
             // 
@@ -556,12 +549,23 @@
             groupBox8.TabStop = false;
             groupBox8.Text = "Мастер 8";
             // 
+            // numericUpDown_seed
+            // 
+            numericUpDown_seed.Location = new System.Drawing.Point(14, 44);
+            numericUpDown_seed.Maximum = new decimal(new int[] { int.MaxValue, 0, 0, 0 });
+            numericUpDown_seed.Minimum = new decimal(new int[] { int.MaxValue, 0, 0, int.MinValue });
+            numericUpDown_seed.Name = "numericUpDown_seed";
+            numericUpDown_seed.Size = new System.Drawing.Size(163, 23);
+            numericUpDown_seed.TabIndex = 16;
+            // 
             // Start_menu
             // 
             AcceptButton = EntryButton;
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(320, 679);
+            ControlBox = false;
+            Controls.Add(numericUpDown_seed);
             Controls.Add(groupBox8);
             Controls.Add(groupBox7);
             Controls.Add(groupBox6);
@@ -572,7 +576,6 @@
             Controls.Add(groupBox1);
             Controls.Add(label_trackBar_high);
             Controls.Add(label_trackBar_low);
-            Controls.Add(textBox_seed);
             Controls.Add(trackBar_amount);
             Controls.Add(label_amount);
             Controls.Add(label_seed);
@@ -601,6 +604,7 @@
             groupBox7.PerformLayout();
             groupBox8.ResumeLayout(false);
             groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown_seed).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -610,7 +614,6 @@
         private System.Windows.Forms.Label label_seed;
         private System.Windows.Forms.Label label_amount;
         private System.Windows.Forms.TrackBar trackBar_amount;
-        private System.Windows.Forms.TextBox textBox_seed;
         private System.Windows.Forms.Label label_trackBar_low;
         private System.Windows.Forms.Label label_trackBar_high;
         private System.Windows.Forms.Label label_qual1;
@@ -655,5 +658,6 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.NumericUpDown numericUpDown_seed;
     }
 }
